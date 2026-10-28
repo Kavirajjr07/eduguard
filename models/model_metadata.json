@@ -1,0 +1,112 @@
+{
+  "model_version": "eduguard-v20261028-043324",
+  "training_date": "2026-10-28T04:33:24",
+  "selected_model": "logistic_regression",
+  "selected_threshold": 0.12000000000000001,
+  "dataset_version": "sih2026_student_dropout_10000_gpa10",
+  "feature_schema": [
+    "age",
+    "year_of_study",
+    "department",
+    "attendance_pct",
+    "internal_marks",
+    "assignment_completion_pct",
+    "previous_gpa",
+    "current_gpa",
+    "failed_subjects",
+    "study_hours_weekly",
+    "commute_minutes",
+    "family_income_band",
+    "first_generation_student",
+    "scholarship",
+    "fee_payment_delay_days",
+    "engagement_score",
+    "counselling_sessions"
+  ],
+  "random_seed": 2026,
+  "metrics": {
+    "test": {
+      "roc_auc": 0.8600713012477719,
+      "pr_auc": 0.9810966009952002,
+      "precision": 0.9311265349706354,
+      "recall": 0.9678135405105438,
+      "f1": 0.9491156462585034,
+      "accuracy": 0.9065,
+      "brier_score": 0.14978055605966228,
+      "confusion_matrix": [
+        [
+          69,
+          129
+        ],
+        [
+          58,
+          1744
+        ]
+      ],
+      "threshold": 0.12000000000000001
+    },
+    "comparison": {
+      "logistic_regression": {
+        "roc_auc": 0.8600713012477719,
+        "pr_auc": 0.9810966009952002,
+        "precision": 0.9311265349706354,
+        "recall": 0.9678135405105438,
+        "f1": 0.9491156462585034,
+        "accuracy": 0.9065,
+        "brier_score": 0.14978055605966228,
+        "confusion_matrix": [
+          [
+            69,
+            129
+          ],
+          [
+            58,
+            1744
+          ]
+        ],
+        "threshold": 0.12000000000000001
+      },
+      "random_forest": {
+        "roc_auc": 0.8393479747530802,
+        "pr_auc": 0.9779810042900281,
+        "precision": 0.9069296914516944,
+        "recall": 0.9950055493895672,
+        "f1": 0.9489282879068537,
+        "accuracy": 0.9035,
+        "brier_score": 0.07376269796705835,
+        "confusion_matrix": [
+          [
+            14,
+            184
+          ],
+          [
+            9,
+            1793
+          ]
+        ],
+        "threshold": 0.47
+      },
+      "hist_gradient_boosting": {
+        "roc_auc": 0.8153959125102299,
+        "pr_auc": 0.9732327840822979,
+        "precision": 0.909506863243518,
+        "recall": 0.9927857935627081,
+        "f1": 0.9493234279649775,
+        "accuracy": 0.9045,
+        "brier_score": 0.07736782453088348,
+        "confusion_matrix": [
+          [
+            20,
+            178
+          ],
+          [
+            13,
+            1789
+          ]
+        ],
+        "threshold": 0.27
+      }
+    }
+  },
+  "notes": "Synthetic-data performance only; not evidence of real-world effectiveness."
+}
